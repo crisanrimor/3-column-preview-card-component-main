@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --heading: hsl(0, 0%, 95%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+}
+
+.card{
+    width: 90%;
+    max-width: 75rem;
+    margin: auto;
+    display: flex;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.card__item{
+    padding: 3em 5em 3em 3em;
+    width: 33.33%;
+    color: var(--heading);
+}
+
+.card__item--y{
+    background-color: var(--bright-orange);
+}
+
+.card__item--b{
+    background-color: var(--dark-cyan);
+}
+
+.card__item--g{
+    background-color: var(--very-dark-cyan);
+}
+
+.card__img{
+    display: block;
+    margin-bottom: 3em;
+    transform: scale(1.2);
+}
+
+.card__heading{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+}
+
+.card__paragraph{
+    color: var(--paragraph);
+    margin: 2.5em 0 6em;
+    line-height: 1.7;
+    width: 90%;
+}
+
+.card__cta{
+    text-decoration: none;
+    background-color: var(--heading);
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 2rem;
+    border: 2px solid #fff;
+    transition: all .4s;
+}
+
+.card__cta--y{
+    color: var(--bright-orange);
+}
+
+.card__cta--b{
+    color: var(--dark-cyan);
+}
+
+.card__cta--g{
+    color: var(--very-dark-cyan);
+}
+
+.card__cta:hover{
+    background-color: transparent;
+    color: var(--heading);
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .card{
+        flex-direction: column;
+        margin: 4em auto;
+    }
+
+    .card__item{
+        width: 100%;
+        max-width: 25rem;
+        margin: 0 auto;
+        padding: 3em;
+    }
+
+    .card__item--y{
+        border-top-left-radius: 0.625rem;
+        border-top-right-radius: 0.625rem;
+    }
+
+    .card__item--g{
+        border-bottom-left-radius: 0.625rem;
+        border-bottom-right-radius: 0.625rem;
+    }
+
+    .card__img{
+        margin-bottom: 2.5em;
+    }
+    
+    .card__heading{
+        font-size: 2.5rem;
+    }
+
+    .card__paragraph{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+}
