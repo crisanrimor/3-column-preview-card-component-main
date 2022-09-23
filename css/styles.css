@@ -98,7 +98,7 @@ body{
 
 /* media queries */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .card{
         flex-direction: column;
         margin: 4em auto;
